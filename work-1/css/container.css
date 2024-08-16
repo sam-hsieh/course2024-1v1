@@ -1,0 +1,51 @@
+/* 基礎容器樣式 */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  /* 小螢幕 (超小設備, < 576px) */
+  @media (max-width: 575.98px) {
+    .container {
+      max-width: 100%;
+    }
+  }
+  
+  /* 中小螢幕 (小型設備, >= 576px) */
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  /* 中螢幕 (中型設備, >= 768px) */
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  /* 大螢幕 (大型設備, >= 992px) */
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  /* 超大螢幕 (超大型設備, >= 1200px) */
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  
+  /* 超寬螢幕 (極大型設備, >= 1400px) */
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1320px;
+    }
+  }
+
