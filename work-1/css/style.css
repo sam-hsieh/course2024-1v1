@@ -235,7 +235,7 @@ footer .footer-icon svg {
     box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
     margin-top: 20px;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .btn span {
@@ -251,13 +251,12 @@ footer .footer-icon svg {
     bottom: 0;
     width: 0;
     background-color: rgba(0, 0, 0, 1);
-    transition: width 0.4s;
+    transition: all 0.4s;
 }
 
 .btn:hover:after {
+  left: 0;
     width: 100%;
-    left: 0;
-
 }
 
 .btn:hover span {
