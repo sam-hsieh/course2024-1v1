@@ -1,0 +1,229 @@
+:root {
+    --nav-h: 80px;
+
+}
+a {
+    text-decoration: none;
+}
+
+.site-name {
+    font-size: 23px;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    display: flex;
+    height: var(--nav-h);
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    height: 60vh;
+    background-image: url(../img/fashion-22.jpg);
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header h1 {
+    font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: #ffffff;
+    line-height: 1.5em;
+}
+h2{
+    font-family: 'Playfair Display', Georgia, "Times New Roman", serif;
+}
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+section.create {
+    background-image: linear-gradient(45deg, #7340c6 0%, #ff99ac 100%);
+    box-shadow: inset 0px -100px 0px 0px #ffffff;
+    padding-bottom: 0;
+}
+
+.afterBar:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 20%;
+    margin: 20px 0;
+    background-color: #f7d584;
+    ;
+}
+
+.text-center.afterBar:after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-img {
+    background-image: linear-gradient(115deg, #22255f 0%, #8bc6ec 100%);
+}
+
+.left-img img {
+    margin: -40px 40px 40px -40px;
+}
+
+.btn-custom {
+    display: inline-block;
+
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #f7d584;
+    padding: 12px 28px;
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.btn-custom span {
+    color: #000;
+}
+
+.btn-custom:after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background-color: rgba(0, 0, 0, 1);
+    transition: all 0.4s;
+}
+
+.btn-custom:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.btn-custom:hover span {
+    color: #fff;
+    z-index: 1
+}
+
+.btn-custom.outline {
+    border: solid 1px #999;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.collections-img {
+    background-image: linear-gradient(35deg, #9f122e 0%, #ff99ac 100%);
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.collections-img img {
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+ul.iconlist {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.iconlist li {
+    display: flex;
+    color: #A39999;
+    line-height: 30px;
+}
+
+ul.iconlist li:before {
+    content: '';
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g fill="%23F4899D"><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></g></svg>');
+    display: block;
+    background-repeat: no-repeat;
+    background-position: 0 5px;
+    width: 20px;
+    height: 30px;
+    flex-shrink: 0
+}
+
+.shopBlock {
+    background-blend-mode: soft-light;
+    background-image: var(--shop-bg), linear-gradient(90deg, rgba(255, 234, 191, 0) 0%, #ffeabf 50%);
+    background-size: cover;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.shopBlock h3 {
+    font-family: 'Oswald', Helvetica, Arial, Lucida, sans-serif;
+    text-transform: uppercase;
+    font-size: 42px;
+    color: var(--shop-color);
+    text-align: right;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #000;
+}
+
+footer .company-name {
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+}
+
+footer .company-name::after,
+footer .company-name::before {
+    content: '';
+    margin: 0 10px;
+    height: 1px;
+    background-color: #999;
+    width: 10px;
+}
+
+footer .footer-icon {
+    display: flex;
+
+}
+
+footer .footer-icon svg {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    color: #fff;
+}
+
+@media screen and (max-width:768px) {
+    header {
+        background-size: cover;
+        background-position: 60%;
+        height: 100vh;
+    }
+    header h1 {
+        font-size: 36px;
+    }
+    .left-img {
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+    .left-img img {
+        margin: -20px 20px 20px -20px;
+    }
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .shopBlock {
+        width: 100%;
+        padding: 20px 20px;
+        min-height: 200px;
+    }
+}

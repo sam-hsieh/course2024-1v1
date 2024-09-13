@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message to LINE Notify</title>
+</head>
+<body>
+    <button id="sendMessage">Send Message</button>
+
+    <script>
+        document.getElementById('sendMessage').addEventListener('click', function() {
+            // 替換成您的 Line Notify 存取權杖
+            const accessToken = 'z8Z6hOUqcCUvqsEFQaTNTyc71g6JDYZ0JerUTupnQOk';
+            
+            // 要發送的訊息
+            const message = '這是一個來自純 JS 的測試訊息！';
+
+            // 發送 HTTP POST 請求到 Line Notify API
+            fetch('https://notify-api.line.me/api/notify', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Authorization': 'Bearer ' + accessToken
+                },
+                body: 'message=' + encodeURIComponent(message)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 200) {
+                    alert('訊息已發送到 LINE！');
+                } else {
+                    alert('發送失敗，錯誤訊息: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('錯誤:', error);
+                alert('發送失敗，請檢查控制台以查看詳細資訊。');
+            });
+        });
+    </script>
+</body>
+</html>

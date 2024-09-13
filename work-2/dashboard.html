@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/theme.css">
+    <link rel="stylesheet" href="./css/slidebar.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+
+</head>
+
+<body>
+ 
+        <div class="nav-top">
+
+            <a class="logo" href="./dashboard.html">
+                <img src="./img/logo.png" alt="" class="d-block custom-sm-width mx-auto"
+                    style="--p-width:150px;--m-width:100px">
+                <h3 class="text-center">線上作業系統</h3>
+            </a>
+            <div class="user-info show">
+                <label class="user-avatar" for="user-avatar">
+                    <input type="checkbox" name="user-avatar" id="user-avatar" class="d-none">
+                    <img src="./img/user-icon.jpg" alt="" class="img-fluid">
+                </label>
+                <div class="user-card">
+                    <div class="user-avatar xl mx-auto">
+                        <img src="./img/user-icon.jpg" alt="" class="img-fluid">
+                    </div>
+                    <p class="mb-2">用戶名稱</p>
+                    <a class="mb-2" href="./login.html">登出</a>
+                    <a class="btn btn-primary w-100" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        繁體中文(切換)
+                    </a>
+                    <div class="collapse w-100 mt-2" id="collapseExample">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="javascript:;">繁體中文</a></li>
+                            <li class="list-group-item"><a href="javascript:;">简体中文</a></li>
+                            <li class="list-group-item"><a href="javascript:;">English</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="after">
+
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">線上作業系統</li>
+                        <li class="breadcrumb-item active" aria-current="page">系統總覽</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="sidebar open">
+            <!-- <button id="mclose">
+                <i class="bi bi-x-lg"></i>
+            </button> -->
+            <ul class="sidebar-menu">
+                <li class="menu-item">
+                    <i class="bi bi-tv"></i>
+                    <label class="radio-label">預約作業
+                        <input type="checkbox" name="menu-item" class="d-none">
+                    </label>
+                    <ul class="submenu">
+                        <li>
+                            <a href="./booking.html">會議室預約</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">會議室查詢</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <i class="bi bi-person-fill"></i>
+                    <label class="radio-label">個人維護作業
+                        <input type="checkbox" name="menu-item" class="d-none">
+                    </label>
+                    <ul class="submenu">
+                        <li>
+                            <a href="javascript:;">我的預約</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">我的通訊錄</a>
+                        </li>
+                        <li>
+                            <a href="./booking-record.html">歷史記錄</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <i class="bi bi-bar-chart-steps"></i>
+                    <label class="radio-label">公司管理作業
+                        <input type="checkbox" name="menu-item" class="d-none">
+                    </label>
+                    <ul class="submenu">
+                        <li>
+                            <a href="javascript:;">公司通訊錄</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <i class="bi bi-collection"></i>
+                    <label class="radio-label">統計報表
+                        <input type="checkbox" name="menu-item" class="d-none">
+                    </label>
+                    <ul class="submenu">
+                        <li>
+                            <a href="javascript:;">會議室時段統計月報表</a>
+                        </li>
+                        <li>
+                            <a href="./booking-source-report.html">預約來源統計表</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">會議室使用明細表</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">會議室使用月份統計報表</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">部門依日期使用明細表</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">部門依會議室使用月份統計表</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <i class="bi bi-gear"></i>
+                    <label class="radio-label">系統管理作業
+                        <input type="checkbox" name="menu-item" class="d-none">
+                    </label>
+                    <ul class="submenu">
+                        <li>
+                            <a href="javascript:;">公司管理</a>
+                        </li>
+                        <li>
+                            <a href="user-management.html">使用者管理</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">會議室管理</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">全部預約紀錄</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">BA會議室電源監控</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="content" style="height: 200vh;">
+            <div class="row justify-content-center">
+                <div class="col-auto col-lg-5">
+                    <div class="refresh">
+                        <i class="bi bi-clock-history"></i>
+                        <div>
+                            <small>目前讀取資料的時間點</small>
+                            <h4 class="my-2">2023年08月23日15:05:58 </h4>
+                            <small>更新頻率每分鐘一次</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto col-lg-5">
+                    <div class="overview">
+                        <div class="text-center me-sm-4 me-3">
+                            <h6>APP註冊人數</h6>
+                            <h3>240</h3>
+                        </div>
+                        <div class="text-center me-sm-4 me-3">
+                            <h6>WEB使用人數</h6>
+                            <h3>56</h3>
+                        </div>
+                        <div class="text-center">
+                            <h6>目前總人數</h6>
+                            <h3>41</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h3 class="subject">會議室即時預約狀況</h3>
+                <div class="room-status-table">
+                    <div class="rst-tr">
+                        <div class="rst-th">5F</div>
+                        <div class="rst-td">
+                            <div class="room-status booked">501</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status">502</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status">503</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status">504</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status">505</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status occupied">506</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status">510</div>
+                        </div>
+                    </div>
+                    <div class="rst-tr">
+                        <div class="rst-th">8F</div>
+                        <div class="rst-td">
+                            <div class="room-status">801</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status booked">802</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status">803</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status">804</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status occupied">805</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status occupied">806</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status">810</div>
+                        </div>
+                    </div>
+                    <div class="rst-tr">
+                        <div class="rst-th">9F</div>
+                        <div class="rst-td">
+                            <div class="room-status">901</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status booked">902</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status booked">903</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status">904</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status occupied">905</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status occupied">906</div>
+                        </div>
+                    </div>
+                    <div class="rst-tr">
+                        <div class="rst-th">10F</div>
+                        <div class="rst-td">
+                            <div class="room-status booked">雲端001</div>
+                        </div>
+                        <div class="rst-td">
+                            <div class="room-status booked">雲端002</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center justify-content-sm-end pb-5">
+                    <div class="col-auto px-0"><small class="room-status me-2">近1小時無人預約</small></div>
+                    <div class="col-auto px-0"><small class="room-status booked me-2">近1小時已預約</small></div>
+                    <div class="col-auto px-0"><small class="room-status occupied">目前使用中</small></div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="javascript" class="btn btn-primary linear" data-bs-toggle="modal"
+                    data-bs-target="#modal-A">增加端点</a>
+            </div>
+
+        </div>
+    </div>
+    <label for="mclick-check" id="mclcik">
+        <input type="checkbox" name="mclcik" id="mclick-check" class="d-none">
+        <i class="bi bi-list"></i>
+    </label>
+    <div id="mask"></div>
+<!-- modal -->
+    <div class="modal" tabindex="-1" id="modal-A" data-bs-keyboard="false" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">與會人員</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover w-100">
+                            <thead>
+                                <tr>
+                                    <th nowrap="nowrap"></th>
+                                    <th nowrap="nowrap">姓名</th>
+                                    <th nowrap="nowrap">郵箱</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </td>
+                                    <td nowrap="nowrap">對一務</td>
+                                    <td>magna @domainname.com.tw</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </td>
+                                    <td nowrap="nowrap">轉積女</td>
+                                    <td>tristique@domainname.com.tw</td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </td>
+                                    <td nowrap="nowrap">aliquet, tristique</td>
+                                    <td>aliquet@domainname.com.tw</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+   
+
+                    <p class="text-center">
+                        <button class="btn btn-primary linear">確定</button>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+  
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

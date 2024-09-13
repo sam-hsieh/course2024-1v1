@@ -1,0 +1,49 @@
+:root {
+  /* 主要底色 */
+  --master-bgc: #edf3fc;
+  /* 左側寬度 */
+  --sidebar-w: 230px;
+  /* pc版上方高度 */
+  --nav-top-h: 130px;
+  /* 選單圖示顏色 */
+  --menu-item-icon: #96b2dc;
+  /* 選單文字顏色 */
+  --sidebar-menu-a: #0f213e;
+  --sidebar-menu-a-hover: #168088;
+  /* 用戶資訊連結顏色 */
+  --avatar-a: #0579bb;
+  /* 用戶資訊展開漸層色 */
+  --avatar-card-bgc-s: #cadfff;
+  --avatar-card-bgc-e: #e3eeff;
+  /* 按鈕風格漸層 */
+  --btn-primary-bgc-s: #0193b4;
+  --tn-primary-bgc-e: #0577bc;
+  /*  modal 標頭風格漸層*/
+  --modal-headerbgc-s: #a69dcd;
+  --modal-headerbgc-e: #80c4d7;
+  /* 文字主要 */
+  --color-primary:#168088;
+}
+
+.linear {
+  background-image: linear-gradient(
+    90deg,
+    var(--btn-primary-bgc-s),
+    var(--tn-primary-bgc-e)
+  );
+}
+.th-linear{
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+.bg-edf3fc{
+  background-color: var(--body-bgc);
+}
+a.link-gr680{
+  color: #168088 !important;
+}
+a.link-gr680:hover{
+  color: #12b3be !important;
+}
+a.link-gr680.disable{
+  color: #f60000 !important;
+}
