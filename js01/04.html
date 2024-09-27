@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myh2 {
+            color: #f00;
+        }
+
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+<h1 style="color: #000;">我是h1</h1>
+<h2 class="myh2" id="firstH2">我是第一個h2</h2>
+<h2 class="myh2">我是第二個h2</h2>
+<h2 class="myh2">我是第三個h2</h2>
+
+<body>
+    <script>
+        console.log(document.getElementById('firstH2'))
+
+        console.log(document.getElementsByClassName('myh2'))
+
+        console.log(document.getElementsByClassName('myh2')[2].innerHTML)
+
+        console.log(document.getElementsByTagName('h2'))
+
+        console.log(document.getElementsByTagName('h2')[0].innerHTML)
+
+        console.log(document.querySelector("h1").style.color)
+
+        console.log(document.querySelector("h2.myh2").innerHTML = "我變了內容")
+
+        console.log(document.querySelectorAll("h2.myh2")[2].innerHTML = "我2變了內容")
+
+        
+        const elements = document.querySelectorAll(".myh2");
+        // 使用 forEach 遍歷所有選取的元素，並修改其 innerHTML
+        elements.forEach((element) => {
+            element.innerHTML = "新內容";
+        });
+
+    </script>
+</body>
+
+</html>

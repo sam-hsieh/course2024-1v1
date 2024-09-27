@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜數字</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/08.css">
+</head>
+
+<body>
+    <div class="container">
+        <h6 class="text-center fw-bolder">選一個數字看誰大</h6>
+        <div style="height: 4rem;">
+            <div id="result"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <div id="randomNum">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="row" id="row">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+
+        const totalNum=16;
+        const rowCols=Math.ceil(Math.sqrt(totalNum))
+        //生成亂數
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        const resultTxt = document.querySelector("#result")
+        let randomNum = 0;
+        const randomNumDOM = document.querySelector("#randomNum")
+        randomNumDOM.innerHTML = randomNum
+
+        // let htmlContent = "";
+        // // 使用迴圈來生成內容
+        // for (let index = 0; index <= 9; index++) {
+        //     // 累加每個 <div> 的內容
+        //     htmlContent += `<div class="col-auto">${index}</div>`;
+        // }
+        // // 將生成的內容插入到容器中
+        // document.querySelector(".row").innerHTML = htmlContent;
+
+        const container = document.querySelector("#row");
+        container.classList.add(`row-cols-${rowCols}`)
+        container.style.width=`${rowCols*5}rem`
+
+        // 使用迴圈逐個生成並附加 <div> 元素
+    for (let i = 1; i <= totalNum; i++) {
+        // 創建一個新的 元素容器元素
+        const wrapperDiv = document.createElement("a");
+
+        // 使用 innerHTML 插入包含 HTML 的字串
+        wrapperDiv.innerHTML = `<a href="#" class="col px-0 btX">${i}</a>`;
+
+        // 將新創建的 div 元素附加到容器中
+        container.append(wrapperDiv.firstElementChild); // 把生成的子元素附加到容器中
+        document.querySelectorAll(".btX")[i - 1].addEventListener('click', (e) => {
+            console.log(e.target.innerHTML);
+            const yourNum = Number(e.target.innerHTML)
+            randomNum = getRandomInt(0, totalNum)
+            randomNumDOM.innerHTML = randomNum
+
+            if (yourNum > randomNum) {
+                resultTxt.innerHTML = '玩家獲勝'
+                resultTxt.classList.remove("text-danger")
+                resultTxt.classList.add("text-success")
+            }
+            else if (yourNum > randomNum) {
+                resultTxt.innerHTML = '雙方平手'
+            } else {
+                resultTxt.innerHTML = '電腦獲勝'
+                resultTxt.classList.remove("text-success")
+                resultTxt.classList.add("text-danger")
+            }
+        })
+    }
+    </script>
+</body>
+
+</html>

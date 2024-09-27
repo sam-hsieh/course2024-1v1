@@ -1,0 +1,36 @@
+@keyframes fadeDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    /* 50%{
+        transform: translateY(-40px);
+        opacity: 0.5;
+    } */
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* @keyframes headerBg {
+    0% {
+        background-size: 130%;
+        
+    }
+
+    100% {
+        background-size: 100%;
+    }
+} */
+@keyframes headerBg {
+    0% {
+        background-position: 50%;
+        
+    }
+
+    100% {
+        background-position: 60%;
+    }
+}
