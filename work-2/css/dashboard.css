@@ -3,7 +3,6 @@
   --room-row-num: 7;
   --rst-tr-w: 4rem;
 }
-
 .content {
   background-color: #fff;
   min-height: calc(100vh - var(--nav-top-h));
@@ -11,67 +10,55 @@
   position: relative;
   margin-left: var(--sidebar-w);
 }
-
 h3.subject {
   font-size: 28px;
   font-weight: 600;
   color: var(--color-primary);
   margin-bottom: 20px;
 }
-
 .refresh {
   display: flex;
   align-items: center;
   border-right: 1px solid #f2f2f2;
   margin-right: 20px;
 }
-
 .refresh h4 {
   color: var(--color-primary);
 }
-
 .refresh small {
   color: #a4a4a4;
 }
-
 .refresh i {
   margin-right: 20px;
   font-size: 36px;
   color: #a4a4a4;
 }
-
 .overview {
   display: flex;
   align-items: center;
 }
-
 .overview h3 {
   color: var(--color-primary);
   font-size: 36px;
   font-weight: 600;
 }
-
 .overview h6 {
   font-weight: 300;
   color: #a4a4a4;
 }
-
 hr {
   color: #f2f2f2;
   opacity: 1;
   margin-top: 40px;
   margin-bottom: 40px;
 }
-
 .room-status-table {
   width: 100%;
   margin-bottom: 20px;
 }
-
 .room-status-table .rst-tr>.rst-td {
   width: calc((100% - var(--rst-tr-w)) / var(--room-row-num));
 }
-
 .room-status-table .rst-th {
   width: var(--rst-tr-w);
   font-weight: 900;
@@ -79,34 +66,28 @@ hr {
   color: var(--color-primary);
   text-align: center;
 }
-
 .room-status-table>.rst-tr {
   display: flex;
   border-bottom: solid 1px #bfc1c4;
   flex-wrap: wrap;
 }
-
 .room-status-table>.rst-tr:first-child {
   border-top: solid 1px #bfc1c4;
 }
-
 .room-status-table .rst-th,
 .room-status-table .rst-td {
   padding: 1rem;
 }
-
 .room-status-table .rst-td>div {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
 .room-status {
   color: #ababab;
   display: flex;
   align-items: center;
 }
-
 .room-status.booked:before,
 .room-status.occupied:before {
   content: "";
@@ -116,47 +97,37 @@ hr {
   border-radius: 0.2rem;
   margin-right: 0.2rem;
 }
-
 .room-status.booked {
   color: #176408;
 }
-
 .room-status.occupied {
   color: #c81919;
 }
-
 .room-status.booked:before {
   background-color: #176408;
 }
-
 .room-status.occupied:before {
   background-color: #c81919;
 }
-
 #roomChart,
 #usageChart {
   height: 300px;
 }
-
 .roomChartProgress {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-
 .roomChartProgress h2 {
   font-size: 3.5rem;
   margin-bottom: 0;
   font-weight: 900;
 }
-
 .roomChartProgress .priFont {
   color: var(--color-primary);
 }
-
 .roomChartProgress .secFont {
   color: #ababab;
 }
-
 .roomChartProgress .Progress {
   margin-top: 1rem;
   height: 1.5rem;
@@ -165,7 +136,6 @@ hr {
   position: relative;
   overflow: hidden;
 }
-
 .roomChartProgress .Progress>span {
   position: absolute;
   top: 0;
@@ -173,17 +143,14 @@ hr {
   background-image: linear-gradient(#469198, #214c52);
   height: 100%;
 }
-
 @media (max-width: 1024px) {
   :root {
     /* mobile 會議室即時預約狀況每列顯示幾間 */
     --room-row-num: 3;
   }
-
   h3.subject {
     text-align: center;
   }
-
   .refresh {
     border-right: none;
     border-bottom: 1px solid #f2f2f2;
@@ -191,13 +158,11 @@ hr {
     padding-bottom: 20px;
     margin-bottom: 20px;
   }
-
   .room-status-table .rst-tr {
     width: 100%;
     padding-bottom: 10px;
     margin-bottom: 10px;
   }
-
   .room-status-table .rst-tr .rst-th {
     display: block;
     width: 100%;
@@ -206,40 +171,33 @@ hr {
     text-align: left;
     font-size: 1.2rem;
   }
-
   .room-status-table .rst-tr>.rst-td {
     width: calc(100% / var(--room-row-num));
     padding: 5px;
   }
-
   .room-status-table .rst-tr>.rst-td .room-status {
     background-color: #e8eaee;
     padding: 10px;
   }
-
   .room-status-table .rst-tr .rst-th {
     background-color: #fff;
   }
-
   hr {
     color: #f2f2f2;
     opacity: 1;
     margin-top: 20px;
     margin-bottom: 20px;
   }
-
   #roomChart,
   #usageChart {
     height: 200px;
   }
-
   .content {
     border-radius: 0;
     margin-top: 0;
     margin-left: 0;
     padding: 20px;
   }
-
   .breadcrumb .breadcrumb-item {
     font-size: 18px;
   }

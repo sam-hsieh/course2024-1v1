@@ -1,0 +1,28 @@
+#mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.blur {
+    filter: blur(5px);
+}
+dialog{
+    width: 50vw;
+    height: 50vw;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8); /* 手動設定為黑色，50% 透明度 */
+}
