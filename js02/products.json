@@ -1,0 +1,26 @@
+[
+    {
+        "name": "IPhone",
+        "price": 20000,
+        "count": 1,
+        "amounts": ""
+    },
+    {
+        "name": "耐摔手機殼",
+        "price": 900,
+        "count": 2,
+        "amounts": ""
+    },
+    {
+        "name": "快速充電器",
+        "price": 560,
+        "count": 3,
+        "amounts": ""
+    },
+    {
+        "name": "藍芽耳機",
+        "price": 1200,
+        "count": 0,
+        "amounts": ""
+    }
+]

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>取得外部json資料-products</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <table class="table table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>商品</th>
+                    <th>金額</th>
+                    <th>數量</th>
+                    <th>金額</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let tbodyHTML = ""
+        fetch('products.json')
+            .then(response => {
+                return response.json();
+            })
+            .then(res => {
+                res.forEach((element) => {
+                    element.amounts = element.count * element.price
+                    tbodyHTML += `<tr>  
+                                <td>${element.name}</td>
+                                <td>${element.price}</td>
+                                <td>${element.count}</td>
+                                <td>${element.count * element.price}</td>
+                              </tr> `
+                });
+                tbody.innerHTML = tbodyHTML;
+            })
+            .catch(error => {
+                //攔截錯誤
+                console.error(error);
+            });
+
+
+
+
+    </script>
+</body>
+
+</html>

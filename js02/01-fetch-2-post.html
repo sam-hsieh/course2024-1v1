@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios POST </title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="contaioner w-50 pt-5 mx-auto">
+        <h3>使用POST發送API請求</h3>
+
+        <div class="row gy-2 ">
+            <div class="col-12">
+                <input type="text" id="title" class="form-control" placeholder="請輸入name">
+            </div>
+            <div class="col-12">
+                <input type="text" id="body" class="form-control" placeholder="請輸入body">
+            </div>
+            <div class="col-12">
+                <input type="number" id="userId" class="form-control" placeholder="請輸入userId">
+            </div>
+            <div class="col-12">
+                <button id="postButton" class="btn btn-success">Send POST Request</button>
+            </div>
+        </div>
+        <div id="result" class="my-4"></div>
+        <div id="pre"></div>
+    </div>
+
+
+    <script>
+        // 點擊按鈕後發送 POST 請求
+        const postButton = document.querySelector('#postButton')
+        const pre = document.querySelector("#pre")
+        const result = document.querySelector("#result")
+        const title = document.querySelector("#title")
+        const body = document.querySelector("#body")
+        const userId = document.querySelector("#userId")
+        postButton.addEventListener('click', () => {
+            // 可事先定義好要發送的資料
+            // const postData = {
+            //     title: 'foo',
+            //     body: 'bar',
+            //     userId: 1
+            // };
+
+            // 發送 POST 請求到 JSONPlaceholder
+            axios.post('https://jsonplaceholder.typicode.com/posts', {
+                title: title.value,
+                body: body.value,
+                userId:userId.value
+            })
+                .then(res => {
+                    // 成功時處理回應
+                    console.log('Response data:', res.data);
+                    pre.innerHTML = JSON.stringify(res.data)
+                    result.innerHTML = 'POST 請求成功！';
+                })
+                .catch(error => {
+                    // 錯誤處理
+                    console.error('Error:', error);
+                    result.innerHTML = '發生錯誤，請檢查控制台。';
+                });
+        });
+        //fetch也可以使用post方式發送api請求，參考
+        //https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch
+    </script>
+
+</body>
+
+</html>

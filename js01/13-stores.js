@@ -35,10 +35,9 @@ city.addEventListener('click', function () {
 
     // 如果未選擇城市或選擇了「請選擇」，只顯示「請選擇」
     if (!selectedCity) {
-        const option = document.createElement('option');
         stores.append(defaultStoreOption);
         address.innerHTML=noadderss;
-        return;
+        return;//跳離目前行為
     }
     //使用find()方法
     const cityData = storeslist.find(value => value.city === selectedCity);

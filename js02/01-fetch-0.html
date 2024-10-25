@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>取得外部json資料</title>
+</head>
+
+<body>
+    <h2></h2>
+    <ul>
+    </ul>
+    </div>
+    <script>
+        const ul = document.querySelector("ul")
+        const h2 = document.querySelector("h2")
+        fetch('user.json')
+            .then(response => {
+                //response.ok表示接收到api回傳成功，狀態碼態碼為 200-299
+                if (!response.ok) {
+                    //如果api有回應錯誤
+                }
+                //fetch API 只允許讀取一次，無法多次讀取 response 的 body。
+                //console.log(response.json());
+                //將取回來的資料，轉換成json格式
+                return response.json();
+            })
+            .then(res => {
+                if (res.ishow) {
+                    h2.innerHTML = '用戶資訊顯示'
+                    ul.innerHTML += `
+                        <li>${res.name}</li>
+                        <li>${res.gender}</li>
+                        <li>${res.occupation}</li>
+                        <li>${res.skills}</li>
+                         `
+                } else {
+                    h2.innerHTML= `用戶資訊隱藏`
+                }
+
+                //istGroup.innerHTML = _html
+            })
+            .catch(error => {
+                //攔截錯誤
+                console.error(error);
+            });
+
+    </script>
+</body>
+
+</html>
