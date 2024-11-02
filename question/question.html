@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問答遊戲</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/questions.css">
+</head>
+
+<body>
+    <div id="countdown"></div>
+    <div class="box" id="questionBox">
+        <div id="qsno"></div>
+        <div id="subject"></div>
+        <div id="options"></div>
+        <div id="qtime">
+            <span></span>
+        </div>
+    </div>
+    
+    <div id="gameEnd">
+        <h2></h2>
+        <a href="javascript:;" onclick="location.reload();">再玩一次</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+    <script src="./question.js">
+        
+    </script>
+</body>
+
+</html>

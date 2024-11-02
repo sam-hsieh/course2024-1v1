@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "username": "Adny2",
+    "gender": "男",
+    "dep": "IT"
+  },
+  {
+    "username": "Samin3",
+    "gender": "男",
+    "dep": "HR",
+    "id": 2
+  },
+  {
+    "id": 3,
+    "username": "Timmy",
+    "gender": "男",
+    "dep": "HR"
+  },
+  {
+    "username": "李雲同",
+    "gender": "女",
+    "dep": "IT",
+    "id": 5
+  },
+  {
+    "username": "王大立",
+    "gender": "男",
+    "dep": "IT",
+    "id": 6
+  }
+]
